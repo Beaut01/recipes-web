@@ -23,8 +23,6 @@ export const Main = () => {
         dispatch(deleteRecipe(id))
     }
 
-    recipes.map(recipe => console.log(recipe.name))
-
     const filteredRecipes = recipes.filter(recipe => recipe.name.toLowerCase().includes(value.toLowerCase()))
 
     if(loading){
