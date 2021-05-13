@@ -8,14 +8,22 @@ export const Recipe = () => {
     const recipe = useSelector(({recipes}) => recipes.recipes.find(r => r.id === recipeId))
 
     return(
-        <div className="container wrapperRecipe">
-            <div className='center ptRecipe'>
-                <div className='center'> 
+        <div className="container">
+            <div className='wrapperRecipe center'>
+                <div> 
                     <h4>{recipe.name}</h4>
                 </div>
-                <div className='ptRecipe'>
-                    <img src={recipe.image} alt='dss'/>
-                    <p>
+            </div>
+            <div className='wrapperRecipe ptRecipe'>
+                <div className='center ptRecipe'>
+                    <div className='ptRecipe'>
+                        <img src={recipe.image} alt='dss' className='cardImage'/>
+                    </div>
+                </div>
+            </div>
+            <div className='wrapperRecipe ptRecipe'>
+                <div>
+                    <p style={{paddingLeft: '15px'}}>
                         {recipe.description}
                     </p>
                 </div>
